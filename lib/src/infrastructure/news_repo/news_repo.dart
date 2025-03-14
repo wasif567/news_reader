@@ -19,6 +19,8 @@ class NewsRepo extends INewsRepo {
       if (response.statusCode == 200) {
         final decode = json.decode(response.body);
         return NewsResponseModel.fromJson(decode);
+      } else {
+        return null;
       }
     } catch (_) {
       rethrow;

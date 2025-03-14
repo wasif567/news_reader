@@ -10,6 +10,8 @@ class NewsViewstate extends ChangeNotifier {
   final INewsRepo _newsRepo;
   NewsViewstate(this._newsRepo);
 
+  TextEditingController searchController = TextEditingController();
+
   // Loading
   bool _isLoading = false;
   bool get isLoading => _isLoading;
@@ -25,7 +27,7 @@ class NewsViewstate extends ChangeNotifier {
     notifyListeners();
   }
 
-  getNewsList() async {
+  Future getNewsList() async {
     try {
       isLoading = true;
       NewsResponseModel? response = await _newsRepo.getNewsPopular();
