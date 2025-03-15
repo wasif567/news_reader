@@ -18,8 +18,8 @@ class ArticleCard extends StatelessWidget {
         color: AppColors.black,
         boxShadow: [
           BoxShadow(
-            color: Colors.white.withValues(alpha: 0.2),
-            spreadRadius: 3,
+            color: Colors.white.withValues(alpha: 0.1),
+            spreadRadius: 4,
             blurRadius: 7,
             offset: Offset(1, 1),
           ),
@@ -37,10 +37,7 @@ class ArticleCard extends StatelessWidget {
               imageUrl: article.urlToImage!,
               progressIndicatorBuilder:
                   (context, url, downloadProgress) => Center(
-                    child: CircularProgressIndicator(
-                      value: downloadProgress.progress,
-                      color: AppColors.primaryColor,
-                    ),
+                    child: CircularProgressIndicator(value: downloadProgress.progress, color: Colors.red),
                   ),
               errorWidget: (context, url, error) => Icon(Icons.error),
             ),

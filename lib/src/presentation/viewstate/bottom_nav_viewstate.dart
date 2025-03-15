@@ -27,4 +27,12 @@ class BottomNavViewstate extends ChangeNotifier {
     Container(color: Colors.purple),
     Container(color: Colors.yellow),
   ];
+
+  List<Tab> tabList = [
+    Tab(text: "Popular Publishers"),
+    Tab(text: "Recent"),
+    Tab(text: "Business"),
+    Tab(text: 'Top Headlines'),
+    Tab(text: 'Wall Street Jounral'),
+  ];
 }

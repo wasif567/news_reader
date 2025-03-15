@@ -39,7 +39,7 @@ class _SplashViewState extends State<SplashView> {
             SizedBox(
               height: kSize.height / 5,
               width: kSize.height / 4,
-              child: const CircularProgressIndicator(color: AppColors.primaryColor),
+              child: const CircularProgressIndicator(color: Colors.red),
             ),
           ],
         ),
@@ -49,6 +49,6 @@ class _SplashViewState extends State<SplashView> {
 
   navigateToHome() async {
     Navigator.pushReplacementNamed(context, RouterConstant.bottomNavRoute);
-    await Provider.of<NewsViewstate>(context, listen: false).getNewsList();
+    await Provider.of<NewsViewstate>(context, listen: false).getNewsPopular();
   }
 }
